@@ -33,7 +33,7 @@ def prediction(Operator, In_Out_Travelling, Network_Type, Call_Drop_Category, La
 # Streamlit App
 def main():
     # Add an image at the top
-    st.image('Picture1.png', width=1000)
+    st.image('Picture1.png', width=750)
     st.title('Voice Call Quality Rating Prediction')
     st.write("This application predicts the Voice Call Quality Rating based on network operator, call environment, location, and other factors.")
 
