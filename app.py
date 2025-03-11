@@ -38,13 +38,14 @@ def main():
     st.write("This application predicts the Voice Call Quality Rating based on network operator, call environment, location, and other factors.")
 
     # Dropdown menus for categorical inputs (with encoding)
-    operator = st.selectbox('Select Operator', list(operator_mapping.keys()))
-    in_out_travel = st.selectbox('In/Out/Travel', list(travel_mapping.keys()))
-    network_type = st.selectbox('Select Network Type', list(network_mapping.keys()))
-    call_drop_category = st.selectbox('Please select the category that best describes your last call experience', list(call_drop_mapping.keys()))
-    state_name = st.selectbox('Select State', list(state_mapping.keys()))
-    month = st.selectbox('Select Month', list(month_mapping.keys()))
-    region = st.selectbox('Select Region', list(region_mapping.keys()))
+    operator = st.selectbox('Select Operator', ['Select'] + list(operator_mapping.keys()))
+    in_out_travel = st.selectbox('In/Out/Travel', ['Select'] + list(travel_mapping.keys()))
+    network_type = st.selectbox('Select Network Type', ['Select'] + list(network_mapping.keys()))
+    call_drop_category = st.selectbox('Please select the category that best describes your last call experience', ['Select'] + list(call_drop_mapping.keys()))
+    state_name = st.selectbox('Select State', ['Select'] + list(state_mapping.keys()))
+    month = st.selectbox('Select Month', ['Select'] + list(month_mapping.keys()))
+    region = st.selectbox('Select Region', ['Select'] + list(region_mapping.keys()))
+
 
     # Numeric inputs for latitude and longitude
     latitude = st.number_input('Enter the latitude of your location in India (Range: 8.4 - 37.6)', min_value=8.4, max_value=37.6, format="%.6f")
